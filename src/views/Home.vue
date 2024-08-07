@@ -1,4 +1,5 @@
 <template>
+  <HelloWorld msg="HelloWorld"/>
     <div class="home">
       <h1>Welcome to Our Website!</h1>
       <p>This is the home page of our awesome Vue.js application.</p>
@@ -10,9 +11,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
+import HelloWorld from '../components/HelloWorld.vue';
 
 export default defineComponent({
   name: 'Home',
+  components: {
+    HelloWorld
+  },
   setup() {
     const router = useRouter()
 

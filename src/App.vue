@@ -1,22 +1,19 @@
 <template>
-  <div id="app">
-    <header>
-      <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/login">Login</router-link>
-      </nav>
-    </header>
-    <main>
-      <router-view />
-    </main>
+  <div id="app bg-yellow-100">
+    <Navbar/>
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Navbar from './components/Navbar.vue';
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  components: {
+    Navbar,
+  },
 })
 </script>
 
@@ -26,20 +23,5 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-}
-
-header {
-  background-color: #35495e;
-  padding: 20px;
-}
-
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-}
-
-nav a.router-link-exact-active {
-  font-weight: bold;
 }
 </style>
